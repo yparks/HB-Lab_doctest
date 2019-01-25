@@ -24,6 +24,23 @@ def is_mel(name, email):
 def most_and_least_common_type(treats):
     """Given list of treats, return most and least common treat types.
 
+    >>> food = [{'type': 'meat'},{'type': 'veggie'},{'type': 'carbs'},{'type': 'meat'}]
+    >>> most_and_least_common_type(food)
+    ('meat', 'veggie')
+
+    >>> flower = [{'type': 'red'}]
+    >>> most_and_least_common_type(flower)
+    ('red', 'red')
+    
+    >>> flower = []
+    >>> most_and_least_common_type(flower)
+    (None, None)
+    
+    >>> flower = [{'type': 'red'}, {'type': 'blue'}, {'type': 'blue'},{'type': 'red'},{'type': 'yellow'}]
+    >>> most_and_least_common_type(flower)
+    ('red', 'yellow')
+
+
     Return most and least common treat types in tuple of format (most, least).
     """
 
@@ -51,22 +68,6 @@ def most_and_least_common_type(treats):
 
 def get_treats():
     """Return treats being brought to the party.
-    >>> food = [{'type': 'meat'},{'type': 'veggie'},{'type': 'carbs'},{'type': 'meat'}]
-    >>> most_and_least_common_type(food)
-    ('meat', 'veggie')
-
-    >>> flower = [{'type': 'red'}]
-    >>> most_and_least_common_type(flower)
-    ('red', 'red')
-    
-    >>> flower = []
-    >>> most_and_least_common_type(flower)
-    (None, None)
-    
-    >>> flower = [{'type': 'red'}, {'type': 'blue'}, {'type': 'blue'},{'type': 'red'},{'type': 'yellow'}]
-    >>> most_and_least_common_type(flower)
-    ('red', 'yellow')
-
 
     One day, I'll move this into a database! -- Balloonicorn
     """
